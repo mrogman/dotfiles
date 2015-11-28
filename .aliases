@@ -2,10 +2,10 @@
 alias szsh="source ~/.zshrc"
 alias sbash="source ~/.bashrc"
 alias sbpro="source ~/.bash_profile"
-alias stmux="source ~/.tmux.conf"
+alias stmux="tmux source-file ~/.tmux.conf"
 
 ## Because why not
-aliase please="sudo"
+alias please="sudo"
 
 ## Common misspellings
 alias c="clear"

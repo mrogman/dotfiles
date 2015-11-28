@@ -7,13 +7,13 @@ fi
 source ~/.bash_profile
 
 # aliases
-if [ -f $HOME/.aliases ]; then
-  . $HOME/.aliases
+if [ -f ~/dotfiles/.aliases ]; then
+  source ~/dotfiles/.aliases
 fi
 
 # Zsh private additions
-if [ -f $HOME/.zsh-private ]; then
-  . $HOME/.zsh-private
+if [ -f ~/.zsh-private ]; then
+  source ~/.zsh-private
 fi
 
 # Path to your oh-my-zsh installation.

@@ -2,7 +2,7 @@
 
 
 #
-# Install script for new UNIX workstation
+# Install script for new Ubuntu/Debian workstation 
 #
 #
 
@@ -20,31 +20,37 @@ mkdir Workspace #TODO: make conditional
 ## Programs - General ##
 ########################
 
-# install imagemagick
+## Install git
+sudo apt-get install git
+#git config --global user.name "your username"
+#git config --global user.email "your email"
+
+## Install imagemagick
+sudo apt-get install imagemagick
 
 
 #######################
 ## Zsh installations ##
 #######################
 
-# Install Zsh
-mkdir ~/.zsh #make directory for zsh plugins
+## Install Zsh
+sudo apt-get install zsh
+mkdir ~/.zsh #make directory for zsh stuff
 
+## Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install OhMyZsh
-
-#
-
-# Install zsh-autosuggestions
+## Install zsh-autosuggestions
 git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
-# Install zsh-syntax-highlighting
+## Install zsh-syntax-highlighting
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting # plugin delcared in .zshrc
 
-# install Base16-shell
+## Install Base16-shell
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
-# install powerline & fonts
+## Install powerline & fonts
+sudo apt-get install powerline
 
 
 ########################

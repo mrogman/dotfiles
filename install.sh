@@ -15,6 +15,20 @@
 mkdir dotfiles #TODO: make conditional
 mkdir Workspace #TODO: make conditional 
 
+## Delete any existing dotfiles in the home directory
+rm ~/.vimrc
+rm ~/.zshrc
+rm ~/.bash_profile
+rm ~/.bashrc
+rm ~/.tmux.conf
+
+## Create symlinks to dotfiles
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+
 
 ########################
 ## Programs - General ##

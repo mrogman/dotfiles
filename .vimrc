@@ -1,3 +1,3 @@
-## put vim configuration shit here
-
+set number
+set relativenumber
 

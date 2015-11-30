@@ -1,11 +1,8 @@
 #!/bin/sh
 
-
 #
 # Install script for new Ubuntu/Debian workstation 
 #
-#
-
 
 ###########
 ## Setup ##
@@ -19,14 +16,12 @@ mkdir Workspace #TODO: make conditional
 rm ~/.vimrc
 rm ~/.zshrc
 rm ~/.bash_profile
-rm ~/.bashrc
 rm ~/.tmux.conf
 
 ## Create symlinks to dotfiles
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 
@@ -41,6 +36,21 @@ sudo apt-get install git
 
 ## Install imagemagick
 sudo apt-get install imagemagick
+
+## Install VLC
+sudo apt-get install vlc
+
+## -- Ubuntu -- ## TODO: wrap in if statement
+
+## Install cairo dock
+sudo apt-get install cairo-dock
+
+## Tweak tools
+sudo apt-get install unity-tweak-tool
+
+## Package managers
+sudo apt-get install synaptic
+sudo apt-get install 
 
 
 #######################
@@ -71,28 +81,35 @@ sudo apt-get install powerline
 ## Tmux installations ##
 ########################
 
-
+## Install Tmux
+sudo apt-get install tmux
 
 #######################
 ## VIM installations ##
 #######################
 
+## Install vim
+sudo apt-get install vim
+
+## Install NeoBundle
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+sh ./install.sh
 
 
 ######################################
 ## Java/Groovy/Grails installations ##
 ######################################
 
-# install sdkman
+## Install sdkman
 curl -s http://get.sdkman.io | bash
 
-# install java 6-8
-# only for linux TODO: make conditional
+## Install java 6-8
+## only for linux TODO: make conditional
 sudo apt-get install openjdk6
 sudo apt-get install openjdk7
 sudo apt-get install openjdk8
 
-# install groovy
+## Install groovy
 sdk install groovy #latest
 sdk install groovy 2.3.9
 
@@ -101,10 +118,13 @@ sdk install groovy 2.3.9
 ## Ruby/Rails Installations ## 
 ##############################
 
-# install rbenv
+## Install rbenv
 sudo apt-get install rbenv
 
-# install ruby
+## Install ruby-build
+sudo apt-get install ruby-build
+
+## Install ruby
 rbenv install (version)
 rbenv install (version)
 
@@ -116,19 +136,27 @@ gem install z #sinatra
 gem install a #
 gem install b #
 
+
 ##############################
 ## JavaScript installations ##
 ##############################
 
-# install meteor
+## Install meteor
+curl https://install.meteor.com/ | sh
 
-# install node
+## Install node
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install nodejs #node from APT
+sudo ln -s /usr/bin/nodejs /usr/bin/node #create symlink as many node tools use 'node'
 
+## Install npm
+sudo apt-get install npm
 
-###########################
+##########################
 ## Python installations ##
 ##########################
 
-# install pip
+## Install pip
+sudo apt-get install pip
 
 

@@ -15,15 +15,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
+" Bundles:
 
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'DrSpatula/vim-buddy'
-NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 
@@ -37,14 +37,35 @@ NeoBundleCheck
 
 " Settings -----------------------------------------
 
+" line numbers
 set number
 set relativenumber
+
+"files, backup and swap
+set backup
+set backupdir=~/.vim/tmp "backup
+set dir=~/.vim/tmp "swap
+
+"status line
 set laststatus=2 "always show status line
 let g:airline_powerline_fonts = 1 "use powerline symbols with airline
 let g:airline_theme='wombat'
 let g:airline#extensions#tabline#enabled = 1
+
+"color scheme
 colo buddy "color scheme
-hi Normal ctermbg=236
+hi Normal ctermbg=235
+
+" syntastic recommended settings (remove after reading manual)
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Key mappings -------------------------------------
 
@@ -52,8 +73,8 @@ let mapleader="'" "leader key
 
 map <C-n> :NERDTreeToggle<CR>
 
-" buffer switching
-nmap <leader>l :bnext<CR> "next
-nmap <leader>h :bprevious<CR> "previous
-nmap <leader>w :bp <BAR> bd #<CR> "close buffer and go to prev
+"buffer switching
+map <leader>l :bnext<RETURN> "next
+map <leader>h :bprevious<RETURN> "previous
+map <leader>w :bp <BAR> bd #<RETURN> "close buffer and go to prev
 

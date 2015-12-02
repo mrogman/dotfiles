@@ -1,35 +1,3 @@
-## Source shell functions 
-if [ -f ~/dotfiles/.shell_functions]; then
-  source ~/dotfiles/.shell_functions
-fi
-
-## source bash profile
-source ~/.bash_profile
-
-# aliases
-if [ -f ~/dotfiles/.aliases ]; then
-  source ~/dotfiles/.aliases
-fi
-
-# Zsh private additions
-if [ -f ~/.zsh-private ]; then
-  source ~/.zsh-private
-fi
-
-# Path to your oh-my-zsh installation.
-export ZSH=/home/matt/.oh-my-zsh
-
-# zsh powerline installation
-#r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-
-# tmux powerline **deprecated (remove)**
-#export TMUX_POWERLINE="~/terminal/tmux-powerline"
-
-export PROMPT="$PROMPT"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-
-# clipboard to default
-set clipboard=unnamed
-
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-railscasts.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
@@ -72,6 +40,38 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
+## Source shell functions 
+if [[ -f ~/dotfiles/.shell_functions ]]; then
+  source ~/dotfiles/.shell_functions
+  ## Set JAVA_HOME
+  setJava 8
+fi
+
+## Source bash files 
+#source ~/.bashrc
+source ~/.bash_profile
+
+# Aliases
+if [ -f ~/dotfiles/.aliases ]; then
+  source ~/dotfiles/.aliases
+fi
+
+# Zsh private additions
+if [ -f ~/.zsh-private ]; then
+  source ~/.zsh-private
+fi
+
+# Path to your oh-my-zsh installation.
+export ZSH=/home/matt/.oh-my-zsh
+
+# zsh powerline installation
+#r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# clipboard to default
+set clipboard=unnamed
+
+
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -105,33 +105,5 @@ if hash tmux 2> /dev/null; then
     echo "\nTmux sessions: $sessions"
   fi
 fi
-
-## Functions
-
-function setJava {
-
-  # set java 6
-  if [ "$1" = "6" ]
-    then
-    JAVA_HOME="/usr/lib/jvm/java-1.6.0-openjdk-amd64"
-  fi
-  # set java 7
-  if [ "$1" = "7" ]
-    then
-    JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-amd64"
-  fi
-  # set java 8
-  if [ "$1" = "8" ]
-    then
-    JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
-  fi
-
-  export JAVA_HOME
-  java -version
-
-}
-
-## Set JAVA_HOME
-setJava 8
 
 

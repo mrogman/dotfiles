@@ -5,17 +5,17 @@ function setJava {
   # set java 6
   if [ "$1" = "6" ]
     then
-    JAVA_HOME="usr/lib/jvm/java-6-openjdk-amd64"
+    JAVA_HOME="/usr/lib/jvm/java-6-openjdk-amd64"
   fi
   # set java 7
   if [ "$1" = "7" ]
     then
-    JAVA_HOME="usr/lib/jvm/java-7-openjdk-amd64"
+    JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
   fi
   # set java 8
   if [ "$1" = "8" ]
     then
-    JAVA_HOME="usr/lib/jvm/java-8-openjdk-amd64"
+    JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
   fi
 
   export JAVA_HOME

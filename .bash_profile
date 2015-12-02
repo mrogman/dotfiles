@@ -12,6 +12,3 @@ export PATH="$GRAILS_HOME/bin:$PATH"
 # Set GROOVY_HOME
 export PATH="$GROOVY_HOME/bin:$PATH"
 
-echo 'finished sourcing .bash_profile'
-echo $PATH
-

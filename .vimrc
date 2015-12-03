@@ -2,6 +2,7 @@ if 0 | endif
 if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
+
   endif
 
   " Required:
@@ -37,6 +38,8 @@ NeoBundleCheck
 
 " Settings -----------------------------------------
 
+set hidden "closed buff hidden 
+
 " line numbers
 set number
 set relativenumber
@@ -52,16 +55,21 @@ let g:airline_powerline_fonts = 1 "use powerline symbols with airline
 let g:airline_theme='wombat'
 let g:airline#extensions#tabline#enabled = 1
 
+"ctrl-p
+let g:ctrlp_show_hidden = 1
+
 "color scheme
 colo buddy "color scheme
 hi Normal ctermbg=235
 
-" syntastic recommended settings (remove after reading manual)
+"syntastic
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+
+"syntastic recommended settings (remove after reading manual)
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -74,7 +82,7 @@ let mapleader="'" "leader key
 map <C-n> :NERDTreeToggle<CR>
 
 "buffer switching
-map <leader>l :bnext<RETURN> "next
-map <leader>h :bprevious<RETURN> "previous
-map <leader>w :bp <BAR> bd #<RETURN> "close buffer and go to prev
+nmap <leader>l :bnext<RETURN> 
+nmap <leader>h :bprevious<RETURN> 
+nmap <leader>w :bp <BAR> bd #<RETURN>
 

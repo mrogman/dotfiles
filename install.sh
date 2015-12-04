@@ -8,15 +8,17 @@
 ## Setup ##
 ###########
 
-## create dirs
-mkdir dotfiles #TODO: make conditional
-mkdir Workspace #TODO: make conditional 
+cd ~
 
 ## Delete any existing dotfiles in the home directory
 rm ~/.vimrc
 rm ~/.zshrc
 rm ~/.bash_profile
 rm ~/.tmux.conf
+
+## create dirs
+mkdir ~/Workspace
+mkdir -p ~/.vim/tmp #tmp dir for swap & backup files
 
 ## Create symlinks to dotfiles
 ln -s ~/dotfiles/.vimrc ~/.vimrc
@@ -50,7 +52,7 @@ sudo apt-get install unity-tweak-tool
 
 ## Package managers
 sudo apt-get install synaptic
-sudo apt-get install 
+#sudo apt-get install 
 
 
 #######################
@@ -105,12 +107,12 @@ curl -s http://get.sdkman.io | bash
 
 ## Install java 6-8
 ## only for linux TODO: make conditional
-sudo apt-get install openjdk6
-sudo apt-get install openjdk7
-sudo apt-get install openjdk8
+sudo apt-get install openjdk-6-jdk
+sudo apt-get install openjdk-7-jdk
+sudo apt-get install openjdk-8-jdk
 
 ## Install groovy
-sdk install groovy #latest
+#sdk install groovy #latest
 sdk install groovy 2.3.9
 
 
@@ -125,16 +127,16 @@ sudo apt-get install rbenv
 sudo apt-get install ruby-build
 
 ## Install ruby
-rbenv install (version)
-rbenv install (version)
+#rbenv install (version)
+#rbenv install (version)
 
 ## Install gems
 
-gem install x #bundle
-gem install y #rake
-gem install z #sinatra
-gem install a #
-gem install b #
+#gem install x #bundle
+#gem install y #rake
+#gem install z #sinatra
+#gem install a #
+#gem install b #
 
 
 ##############################
@@ -157,6 +159,5 @@ sudo apt-get install npm
 ##########################
 
 ## Install pip
-sudo apt-get install pip
-
+sudo apt-get install python-pip python-dev build-essential
 

@@ -25,6 +25,7 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/.gemrc ~/.gemrc
 
 
 ########################
@@ -131,14 +132,17 @@ source ~/.bash_profile
 
 ## Install ruby
 rbenv install 2.2.3 #latest stable
+rbenv global 2.2.3
 
 ## Install gems
 
-#gem install x #bundle
-#gem install y #rake
-#gem install z #sinatra
-#gem install a #
-#gem install b #
+gem install bundler
+gem install rails
+gem install pg
+gem install thin
+gem install foreman
+gem install rake
+gem install sinatra
 
 
 ##############################

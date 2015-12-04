@@ -12,3 +12,4 @@ export PATH="$GRAILS_HOME/bin:$PATH"
 # Set GROOVY_HOME
 export PATH="$GROOVY_HOME/bin:$PATH"
 
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"

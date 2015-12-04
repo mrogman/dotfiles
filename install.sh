@@ -36,9 +36,6 @@ sudo apt-get install git
 #git config --global user.name "your username"
 #git config --global user.email "your email"
 
-## Install imagemagick
-sudo apt-get install imagemagick
-
 ## Install VLC
 sudo apt-get install vlc
 
@@ -54,6 +51,10 @@ sudo apt-get install unity-tweak-tool
 sudo apt-get install synaptic
 #sudo apt-get install 
 
+## Install graphics tools
+sudo apt-get install imagemagick
+sudo apt-get install gimp
+sudo apt-get install inkscape
 
 #######################
 ## Zsh installations ##
@@ -123,12 +124,13 @@ sdk install groovy 2.3.9
 ## Install rbenv
 sudo apt-get install rbenv
 
-## Install ruby-build
-sudo apt-get install ruby-build
+## Install ruby-build as a rbenv plugin
+git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
 
 ## Install ruby
-#rbenv install (version)
-#rbenv install (version)
+rbenv install 2.2.3 #latest stable
 
 ## Install gems
 
@@ -161,3 +163,10 @@ sudo apt-get install npm
 ## Install pip
 sudo apt-get install python-pip python-dev build-essential
 
+
+###########################
+## Finalize installation ##
+###########################
+
+## Install Neobundle plugins
+vim +NeoBundleInstall +qall

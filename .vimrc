@@ -27,6 +27,9 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'Valloric/YouCompleteMe'
+
 
 call neobundle#end()
 

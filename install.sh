@@ -52,6 +52,9 @@ sudo apt-get install unity-tweak-tool
 sudo apt-get install synaptic
 #sudo apt-get install 
 
+## Install cmake
+sudo apt-get install cmake
+
 ## Install graphics tools
 sudo apt-get install imagemagick
 sudo apt-get install gimp
@@ -177,3 +180,7 @@ sudo apt-get install python-pip python-dev build-essential
 
 ## Install Neobundle plugins
 vim +NeoBundleInstall +qall
+
+## Compile YouCompleteMe components (vim)
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer

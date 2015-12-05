@@ -25,6 +25,8 @@ NeoBundle 'DrSpatula/vim-buddy'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'slim-template/vim-slim'
 
 call neobundle#end()
 
@@ -39,6 +41,22 @@ NeoBundleCheck
 " Settings -----------------------------------------
 
 set hidden "closed buff hidden 
+
+"display tabs and trailing spaces
+set list
+set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+
+set incsearch   "find the next match as we type the search
+"set hlsearch    "hilight searches by default
+
+set wrap        "dont wrap lines
+set linebreak   "wrap lines at convenient points
+
+"default indent settings
+set shiftwidth=2
+set softtabstop=2
+set expandtab "replace tabs w/ spaces
+set autoindent
 
 " line numbers
 set number
@@ -85,4 +103,6 @@ map <C-n> :NERDTreeToggle<CR>
 nmap <leader>l :bnext<RETURN> 
 nmap <leader>h :bprevious<RETURN> 
 nmap <leader>w :bp <BAR> bd #<RETURN>
+
+inoremap ;; <ESC>
 

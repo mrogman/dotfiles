@@ -143,6 +143,9 @@ gem install thin
 gem install foreman
 gem install rake
 gem install sinatra
+gem install rubocop
+gem install slim
+gem install haml
 
 
 ##############################

@@ -138,7 +138,6 @@ rbenv install 2.2.3 #latest stable
 rbenv global 2.2.3
 
 ## Install gems
-
 gem install bundler
 gem install rails
 gem install pg
@@ -149,6 +148,11 @@ gem install sinatra
 gem install rubocop
 gem install slim
 gem install haml
+gem install sass
+gem install compass
+gem install mongodb
+gem install bson_ext
+gem install json
 
 
 ##############################

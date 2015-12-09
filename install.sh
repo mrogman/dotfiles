@@ -59,6 +59,7 @@ sudo apt-get install cmake
 sudo apt-get install imagemagick
 sudo apt-get install gimp
 sudo apt-get install inkscape
+sudo apt-get install agave
 
 #######################
 ## Zsh installations ##
@@ -153,7 +154,8 @@ gem install compass
 gem install mongodb
 gem install bson_ext
 gem install json
-
+gem install yard
+gem install rest-client
 
 ##############################
 ## JavaScript installations ##

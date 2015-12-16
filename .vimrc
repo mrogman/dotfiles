@@ -81,7 +81,8 @@ let g:ctrlp_show_hidden = 1
 
 "color scheme
 colo buddy "color scheme
-hi Normal ctermbg=235
+hi Normal ctermbg=none
+hi NonText ctermbg=none
 
 "syntastic
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']

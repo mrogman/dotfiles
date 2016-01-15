@@ -50,7 +50,10 @@ sudo apt-get install unity-tweak-tool
 
 ## Package managers
 sudo apt-get install synaptic
-#sudo apt-get install 
+#sudo apt-get install
+
+## Install build-essential
+sudo apt-get install build-essential
 
 ## Install cmake
 sudo apt-get install cmake
@@ -161,24 +164,22 @@ gem install rest-client
 ## JavaScript installations ##
 ##############################
 
+## Install NVM
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+
 ## Install meteor
 curl https://install.meteor.com/ | sh
 
 ## Install node
-curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-sudo apt-get install nodejs #node from APT
-sudo ln -s /usr/bin/nodejs /usr/bin/node #create symlink as many node tools use 'node'
+nvm install stable #latest stable release
 
-## Install npm
-sudo apt-get install npm
 
 ##########################
 ## Python installations ##
 ##########################
 
 ## Install pip
-sudo apt-get install python-pip python-dev build-essential
-
+sudo apt-get install python-pip python-dev
 
 ###########################
 ## Finalize installation ##

@@ -32,6 +32,8 @@ NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'elzr/vim-json'
+
 
 call neobundle#end()
 

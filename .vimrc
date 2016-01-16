@@ -30,7 +30,8 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'pangloss/vim-javascript'
-
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'kchmck/vim-coffee-script'
 
 call neobundle#end()
 

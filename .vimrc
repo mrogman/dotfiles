@@ -29,6 +29,7 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'pangloss/vim-javascript'
 
 
 call neobundle#end()
@@ -42,8 +43,8 @@ NeoBundleCheck
 
 
 " Settings -----------------------------------------
-
-set hidden "closed buff hidden 
+syntax on
+set hidden "closed buff hidden
 
 "display tabs and trailing spaces
 set list

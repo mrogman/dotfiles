@@ -77,7 +77,7 @@ set dir=~/.vim/tmp "swap
 "status line
 set laststatus=2 "always show status line
 let g:airline_powerline_fonts = 1 "use powerline symbols with airline
-let g:airline_theme='wombat'
+let g:airline_theme='luna'
 let g:airline#extensions#tabline#enabled = 1
 
 "ctrl-p
@@ -87,6 +87,7 @@ let g:ctrlp_show_hidden = 1
 colo buddy "color scheme
 hi Normal ctermbg=none
 hi NonText ctermbg=none
+hi LineNr ctermfg=240 ctermbg=none
 
 "syntastic
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
@@ -108,8 +109,8 @@ let mapleader="'" "leader key
 map <C-n> :NERDTreeToggle<CR>
 
 "buffer switching
-nmap <leader>l :bnext<RETURN> 
-nmap <leader>h :bprevious<RETURN> 
+nmap <leader>l :bnext<RETURN>
+nmap <leader>h :bprevious<RETURN>
 nmap <leader>w :bp <BAR> bd #<RETURN>
 
 inoremap ;; <ESC>

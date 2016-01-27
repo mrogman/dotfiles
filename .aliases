@@ -4,6 +4,11 @@ alias sbash="source ~/.bashrc"
 alias sbpro="source ~/.bash_profile"
 alias stmux="tmux source-file ~/.tmux.conf"
 
+## Testing
+
+# Reports
+alias trepga="open ./target/test-reports/html/all.html" #Grails - all - html
+
 ## Because why not
 alias please="sudo"
 

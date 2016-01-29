@@ -33,6 +33,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'Chiel92/vim-autoformat'
 
 
 call neobundle#end()
@@ -107,6 +108,8 @@ let g:syntastic_check_on_wq = 0
 let mapleader="'" "leader key
 
 map <C-n> :NERDTreeToggle<CR>
+
+noremap <C-j> :Autoformat<CR>
 
 "buffer switching
 nmap <leader>l :bnext<RETURN>
